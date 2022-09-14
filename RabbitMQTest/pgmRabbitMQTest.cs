@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace RabbitMQTest
 {
-    internal static class Program
+    internal static class pgmRabbitMQTest
     {
         /// <summary>
         /// The main entry point for the application.
@@ -16,7 +16,7 @@ namespace RabbitMQTest
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new frmRabbitMQTest());
         }
     }
 }
