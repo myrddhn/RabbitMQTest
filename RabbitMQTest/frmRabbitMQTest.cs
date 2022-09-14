@@ -38,7 +38,7 @@ namespace RabbitMQTest
             factory.UserName = "andi";
             factory.Password = "idna";
             factory.VirtualHost = "artest";
-            factory.HostName = "localhost";
+            factory.HostName = "darwinistic.com";
 
             conn = factory.CreateConnection();
 
@@ -70,6 +70,14 @@ namespace RabbitMQTest
         {
             channel.BasicPublish("", "testqueue", null, Encoding.UTF8.GetBytes("Hello world :-) " + new Random().Next().ToString() + " " + txtPayload.Text));
             Log.Logger.Information("Message published");
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            channel.Close();
+            conn.Close();
+
+            Application.Exit();
         }
     }
 }
